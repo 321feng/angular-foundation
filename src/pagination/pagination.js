@@ -156,14 +156,14 @@ angular.module('mm.foundation.pagination', [])
         }
 
         // Add links to move between page sets
-        if ( isMaxSized && ! rotate ) {
+        if ( isMaxSized ) {
           if ( startPage > 1 ) {
-            var previousPageSet = makePage(startPage - 1, '...', false, false);
+            var previousPageSet = makePage(startPage - 1, '···', false, false);
             pages.unshift(previousPageSet);
           }
 
           if ( endPage < totalPages ) {
-            var nextPageSet = makePage(endPage + 1, '...', false, false);
+            var nextPageSet = makePage(endPage + 1, '···', false, false);
             pages.push(nextPageSet);
           }
         }
